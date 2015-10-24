@@ -1,0 +1,9 @@
+---
+# dev role is for the hosted sandbox site, not the local vm
+# Vagrantfile determines which playbook to run
+- hosts: all
+  user: root
+  roles:
+    - dev
+
+- include: pfl-webapp.yml

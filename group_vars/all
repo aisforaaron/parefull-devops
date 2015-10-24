@@ -1,0 +1,22 @@
+---
+ansible_user_id: vagrant
+nginx_docroot: /home/{{ansible_user_id}}/parefull-heroku/docroot
+nginx_hostname: "{{ hostname }}"
+node_port: 4000
+express_project_name: api
+express_base_route: api/
+nvm_version: v0.4.0
+nvm_node_version: v4.1.1
+mongodb_user: mongodb
+mongo_version: 3.0.6
+app_env: local
+npm_forever_version: 0.15.1
+npm_initdforever_version: 0.1.6
+npm_express_version: 4.13.3
+npm_express_generator: 4.13.1
+npm_nodemon_version: 1.7.1
+npm_bower_version: 1.5.3
+pfl_webapp_dir: /home/{{ansible_user_id}}/parefull-heroku
+pfl_webapp_app: server.js
+pfl_webapp_command: nodemon -L
+pfl_webapp_log_dir: ~/log

@@ -1,0 +1,65 @@
+---
+- apt_key: keyserver=hkp://keyserver.ubuntu.com:80 id=7F0CEB10
+  sudo: yes
+  tags: mongo
+
+- name: Mongo | Add mongodb repo
+  sudo: yes
+  apt_repository:
+    repo: 'deb http://repo.mongodb.org/apt/ubuntu precise/mongodb-org/3.0 multiverse'
+    state: present
+    update_cache: yes
+  tags: mongo
+
+- name: Mongo | Install mongodb
+  sudo: yes
+  apt:
+    pkg: mongodb-org
+    state: present
+  tags: mongo
+
+- name: Mongo | Setup mongo.conf
+  sudo: yes
+  template: src=mongo.conf dest=/etc
+  tags: mongo
+
+- name: Mongo | Ensure mongodb is running
+  sudo: yes
+  service:
+    name: mongod
+    state: started
+  tags: mongo
+
+  #The mongodb service needs a brief delay before accepting commands 
+  # http://stackoverflow.com/a/25562130/4079771
+- name: Mongo | Allow a short sleep period for mongo to accept commands
+  shell: sleep 10
+  tags: mongo
+
+- name: Mongo | Create collections for bits
+  shell: mongo local --eval "db.createCollection('bits')"
+  tags: mongo
+
+- name: Mongo | Create collections for scores
+  shell: mongo local --eval "db.createCollection('scores')"
+  tags: mongo
+
+- name: Mongo | Move bits data file to home dir
+  sudo: yes
+  template: src=parefull-bits-testdata.json dest=/home/{{ansible_user_id}}/
+  tags: mongo
+
+- name: Mongo | Move scores data file to home dir
+  sudo: yes
+  template: src=parefull-scores-testdata.json dest=/home/{{ansible_user_id}}/
+  tags: mongo
+
+- name: Mongo | Import bits data
+  sudo: yes
+  shell: mongoimport --db local --collection bits --drop --file /home/{{ansible_user_id}}/parefull-bits-testdata.json
+  tags: mongo
+
+- name: Mongo | Import scores data
+  sudo: yes
+  shell: mongoimport --db local --collection scores --drop --file /home/{{ansible_user_id}}/parefull-scores-testdata.json
+  tags: mongo

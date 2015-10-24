@@ -1,0 +1,18 @@
+{"_id":{"$oid":"5627cc9834bd98360d614a70"},"ip":"192.168.33.1","name":"Monkeys","created":{"$date":"2015-10-21T17:34:16.466Z"},"__v":0,"scoreAvg":5}
+{"_id":{"$oid":"5627cca834bd98360d614a72"},"ip":"192.168.33.1","name":"Flowers","created":{"$date":"2015-10-21T17:34:32.458Z"},"__v":0,"scoreAvg":5}
+{"_id":{"$oid":"5627ccae34bd98360d614a74"},"ip":"192.168.33.1","name":"Coffee","created":{"$date":"2015-10-21T17:34:38.995Z"},"__v":0,"scoreAvg":8}
+{"_id":{"$oid":"5627d64a34bd98360d614a78"},"ip":"192.168.33.1","name":"Beer","created":{"$date":"2015-10-21T18:15:38.727Z"},"__v":0,"scoreAvg":8}
+{"_id":{"$oid":"5627d65434bd98360d614a7a"},"ip":"192.168.33.1","name":"Octopus","created":{"$date":"2015-10-21T18:15:48.835Z"},"__v":0,"scoreAvg":5}
+{"_id":{"$oid":"5627d65a34bd98360d614a7c"},"ip":"192.168.33.1","name":"Kittens","created":{"$date":"2015-10-21T18:15:54.314Z"},"__v":0,"scoreAvg":4}
+{"_id":{"$oid":"5627d66034bd98360d614a7e"},"ip":"192.168.33.1","name":"Chocolate","created":{"$date":"2015-10-21T18:16:00.584Z"},"__v":0,"scoreAvg":8}
+{"_id":{"$oid":"5627d66634bd98360d614a80"},"ip":"192.168.33.1","name":"Spaghetti","created":{"$date":"2015-10-21T18:16:06.894Z"},"__v":0,"scoreAvg":6}
+{"_id":{"$oid":"5627d67a34bd98360d614a82"},"ip":"192.168.33.1","name":"Pac-Man","created":{"$date":"2015-10-21T18:16:26.240Z"},"__v":0,"scoreAvg":6}
+{"_id":{"$oid":"5627d68d34bd98360d614a84"},"ip":"192.168.33.1","name":"S'mores","created":{"$date":"2015-10-21T18:16:45.153Z"},"__v":0,"scoreAvg":10}
+{"_id":{"$oid":"5627d69434bd98360d614a86"},"ip":"192.168.33.1","name":"Robots","created":{"$date":"2015-10-21T18:16:52.155Z"},"__v":0,"scoreAvg":6}
+{"_id":{"$oid":"5627d69934bd98360d614a88"},"ip":"192.168.33.1","name":"Bubbles","created":{"$date":"2015-10-21T18:16:57.632Z"},"__v":0,"scoreAvg":9}
+{"_id":{"$oid":"5627d69f34bd98360d614a8a"},"ip":"192.168.33.1","name":"Snowball Fights","created":{"$date":"2015-10-21T18:17:03.565Z"},"__v":0,"scoreAvg":5}
+{"_id":{"$oid":"5627d6a934bd98360d614a8c"},"ip":"192.168.33.1","name":"Gym Shorts","created":{"$date":"2015-10-21T18:17:13.586Z"},"__v":0,"scoreAvg":7}
+{"_id":{"$oid":"5627d6b134bd98360d614a8e"},"ip":"192.168.33.1","name":"Vinyl","created":{"$date":"2015-10-21T18:17:21.274Z"},"__v":0,"scoreAvg":7}
+{"_id":{"$oid":"5627d6b934bd98360d614a90"},"ip":"192.168.33.1","name":"Dr Pepper","created":{"$date":"2015-10-21T18:17:29.888Z"},"__v":0,"scoreAvg":9}
+{"_id":{"$oid":"5627d6c034bd98360d614a92"},"ip":"192.168.33.1","name":"New Jersey","created":{"$date":"2015-10-21T18:17:36.377Z"},"__v":0,"scoreAvg":5}
+{"_id":{"$oid":"5627d6c634bd98360d614a94"},"ip":"192.168.33.1","name":"Pizza","created":{"$date":"2015-10-21T18:17:42.074Z"},"__v":0,"scoreAvg":10}

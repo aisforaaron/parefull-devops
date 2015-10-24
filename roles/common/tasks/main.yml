@@ -1,0 +1,23 @@
+---
+- name: Update apt-get
+  apt: update_cache=yes cache_valid_time=3600
+  sudo: yes
+  tags: common
+
+- name: Install Common Packages
+  apt: name={{item}} state=present
+  sudo: yes
+  with_items:
+    - vim
+    - git
+    - curl
+    - tree
+  tags: common
+
+- name: Export APP_ENV in .profile
+  sudo: yes
+  sudo_user: vagrant
+  lineinfile: >
+    dest="~/.profile"
+    line="export APP_ENV={{ app_env }}"
+  tags: common
