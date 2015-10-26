@@ -41,6 +41,9 @@
   when: nvm_check_default|failed
   tags: nvm
 
+- name: Install Browserify
+  shell: sudo -iu {{ ansible_user_id }} npm install browserify@{{ npm_browserify_version }} -g
+
 - name: Install Forever
   shell: sudo -iu {{ ansible_user_id }} npm install forever@{{ npm_forever_version }} -g
 
