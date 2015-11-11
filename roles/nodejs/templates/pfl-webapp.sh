@@ -32,6 +32,7 @@ fi;
 USER="{{ansible_user_id}}"
 APPDIR="{{pfl_webapp_dir}}"
 NODEAPP="{{pfl_webapp_app}}"
+WORKERAPP="{{pfl_webapp_worker}}"
 COMMAND="{{pfl_webapp_command}}"
 APPENV="{{app_env}}"
 
@@ -51,24 +52,27 @@ start() {
    PATH=/usr/local/bin:$PATH
    export NODE_ENV=$APPENV
    (su - $USER -c "cd $APPDIR; forever start -a --pidFile $PIDFILE -l $LOGFILE -e $ERRORLOG -c '$COMMAND' $NODEAPP")
+   (su - $USER -c "cd $APPDIR; forever start -a --pidFile $PIDFILE -l $LOGFILE -e $ERRORLOG -c '$COMMAND' $WORKERAPP")
    RETVAL=$?
 }
 
 restart() {
   echo -n "Restarting $APPDIR/$NODEAPP"
     (su - $USER -c "cd $APPDIR; forever restart $NODEAPP")
+    (su - $USER -c "cd $APPDIR; forever restart $WORKERAPP")
   RETVAL=$?
 }
 
 stop() {
   echo -n "Shutting down $APPDIR/$NODEAPP"
     (su - $USER -c "cd $APPDIR; forever stop $NODEAPP")
+    (su - $USER -c "cd $APPDIR; forever stop $WORKERAPP")
    RETVAL=$?
 }
 
 status() {
    echo -n "Forever Status"
-   (su - $USER -c "cd $APPDIR; forever stop $NODEAPP")
+   (su - $USER -c "cd $APPDIR; forever list")
    RETVAL=$?
 }
 
