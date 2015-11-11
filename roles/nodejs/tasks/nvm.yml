@@ -62,6 +62,16 @@
 - name: Install Bower
   shell: sudo -iu {{ ansible_user_id }} npm install bower@{{ npm_bower_version }} -g
 
+- name: Install Eslint
+  shell: sudo -iu {{ ansible_user_id }} npm install bower@{{ npm_eslint_version }} -g
+
+- name: Install Eslint React Plugin
+  shell: sudo -iu {{ ansible_user_id }} npm install bower@{{ npm_eslint_plugin_react }} -g
+
+- name: Add eslintrc config file to webapp root
+  sudo: yes
+  template: src=eslintrc dest=/home/{{ ansible_user_id }}/.eslintrc mode=0751
+
 - name: "Install npm packages from package.json for pfl-webapp"
   shell: "/home/{{ ansible_user_id }}/.nvm/{{ nvm_node_version }}/bin/npm install"
   args:

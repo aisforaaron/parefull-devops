@@ -16,7 +16,10 @@ npm_express_version: 4.13.3
 npm_express_generator: 4.13.1
 npm_nodemon_version: 1.7.1
 npm_bower_version: 1.5.3
+npm_eslint_version: 1.9.0
+npm_eslint_plugin_react: 3.8.0
 pfl_webapp_dir: /home/{{ansible_user_id}}/parefull-heroku
 pfl_webapp_app: server.js
+pfl_webapp_worker: worker.js
 pfl_webapp_command: nodemon -L
 pfl_webapp_log_dir: ~/log
