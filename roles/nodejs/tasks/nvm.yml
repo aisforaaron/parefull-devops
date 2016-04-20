@@ -63,10 +63,10 @@
   shell: sudo -iu {{ ansible_user_id }} npm install bower@{{ npm_bower_version }} -g
 
 - name: Install Eslint
-  shell: sudo -iu {{ ansible_user_id }} npm install bower@{{ npm_eslint_version }} -g
+  shell: sudo -iu {{ ansible_user_id }} npm install eslint@{{ npm_eslint_version }} -g
 
 - name: Install Eslint React Plugin
-  shell: sudo -iu {{ ansible_user_id }} npm install bower@{{ npm_eslint_plugin_react }} -g
+  shell: sudo -iu {{ ansible_user_id }} npm install eslint-plugin-react@{{ npm_eslint_plugin_react }} -g
 
 - name: Add eslintrc config file to webapp root
   sudo: yes

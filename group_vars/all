@@ -10,6 +10,7 @@ nvm_node_version: v4.1.1
 mongodb_user: mongodb
 mongo_version: 3.0.6
 app_env: local
+npm_browserify_version: 13.0.0
 npm_forever_version: 0.15.1
 npm_initdforever_version: 0.1.6
 npm_express_version: 4.13.3
