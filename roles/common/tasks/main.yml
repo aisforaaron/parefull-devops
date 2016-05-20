@@ -12,6 +12,8 @@
     - git
     - curl
     - tree
+    - graphicsmagick
+    - imagemagick
   tags: common
 
 - name: Export APP_ENV in .profile
@@ -20,4 +22,12 @@
   lineinfile: >
     dest="~/.profile"
     line="export APP_ENV={{ app_env }}"
+  tags: common
+
+- name: Add AWS S3 credentials to local file ~/.aws/credentials
+  template: src=credentials dest=/home/vagrant/.aws/credentials
+  tags: common
+
+- name: Add ESLint file to project root
+  template: src=.eslintrc dest=/home/vagrant/parefull-heroku/.eslintrc
   tags: common

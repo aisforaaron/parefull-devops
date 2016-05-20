@@ -6,3 +6,8 @@
     - mongodb
     - nginx
     - nodejs
+  vars_prompt:
+    - name: "s3_key_id"
+      prompt: "What is the S3 key ID?"
+    - name: "s3_access_key"
+      prompt: "What is the S3 access key?"
